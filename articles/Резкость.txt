@@ -1,0 +1,28 @@
+**Резкость
+Что такое резкость?
+https://www.cambridgeincolour.com/ru/tutorials-ru/sharpness.htm
+
+Факторы, влияющие на резкость изображения.
+https://www.fotosklad.ru/expert/articles/rezkost-na-foto-5-faktorov-kotorye-na-nee-vliaut/
+
+Статья. О резкости.
+http://structure.by/index.php/mikroskopiya/opticheskaya-mikroskopiya/78-o-rezkosti-izobrazheniya
+
+Мера оценки резкости цифрового изображения
+https://cyberleninka.ru/article/n/mera-otsenki-rezkosti-tsifrovogo-izobrazheniya
+
+МЕРЫ ОЦЕНКИ КАЧЕСТВА ИЗОБРАЖЕНИЯ
+https://vital.lib.tsu.ru/vital/access/services/Download/vtls:000789245/SOURCE1
+
+**Python для Резкости
+Как высчитать резкость в изображени (Opencv)
+https://ru.stackoverflow.com/questions/277914/%D0%9A%D0%B0%D0%BA-%D0%B2%D1%8B%D1%81%D1%87%D0%B8%D1%82%D0%B0%D1%82%D1%8C-%D1%80%D0%B5%D0%B7%D0%BA%D0%BE%D1%81%D1%82%D1%8C-%D0%B2-%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8-opencv
+
+Уроки компьютерного зрения на Python + OpenCV с самых азов. Часть 3
+https://habr.com/ru/articles/654663/
+
+Обработка изображений с помощью библиотеки Python Pillow
+https://habr.com/ru/articles/681248/
+
+Регулировка яркости, контрастности, резкости и насыщенности: Pillow в Python
+https://docs-python.ru/packages/biblioteka-pillow-python/iarkost-kontrastnost-rezkost/
