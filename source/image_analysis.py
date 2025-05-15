@@ -11,10 +11,10 @@ def get_resolution(image_path):
     except FileNotFoundError:
         return None, None
 
-def get_brightness_contrast(image_path):
+def get_brightness_contrast(img,image_path=0):
     # Оценивает яркость и контраст.
     try:
-        img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+        # img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
         brightness = np.mean(img)
         contrast = np.std(img)
         return brightness, contrast
@@ -30,10 +30,10 @@ def calculate_noise(image_path):
     except FileNotFoundError:
         return None
 
-def calculate_laplacian_variance(image_path):
+def calculate_laplacian_variance(img,image_path=0):
     # Рассчитывает четкость (дисперсия лапласиана).
     try:
-        img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+        # img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
         laplacian = cv2.Laplacian(img, cv2.CV_64F)
         variance = np.var(laplacian)
         return variance
