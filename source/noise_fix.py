@@ -68,7 +68,7 @@ def evaluate_noise_metrics(image_files):
 image_files = ['user_photo_{message.from_user.id}.jpg']
 
 # Выполнение оценки шумности
-results = evaluate_noise_metrics(image_files)
+results = evaluate_noise_metrics('user_photo_{message.from_user.id}.jpg')
 
 # Сохранение результатов
 for img, metrics in results.items():
