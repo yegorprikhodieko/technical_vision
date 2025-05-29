@@ -9,6 +9,7 @@ from aiogram.filters import Command
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.types import Message
 import aiofiles
+import noise_fix
 import image_analysis
 
 bot = Bot(token="7972736557:AAFoqecWUvjD6hHtQ4kpB4IM7jmeYwL0zhQ")
@@ -93,13 +94,16 @@ async def handle_photo(message: Message):
         photo_bytes = await bot.download_file(file.file_path)
         await f.write(photo_bytes.read())
     # Анализ изображения
+    noise = noise_fix.evaluate_noise_metrics([f"user_photo_{message.from_user.id}.jpg"])
+    # noise = noise[0]
+    print('noise',noise)
     image = cv2.imread(f"user_photo_{message.from_user.id}.jpg", cv2.IMREAD_GRAYSCALE)
     if image is None:
         await message.answer("❌ Не удалось обработать фото. Отправьте его снова.")
         return
     sharpness = image_analysis.calculate_laplacian_variance(image)
     brightness,contrast = image_analysis.get_brightness_contrast(image)
-    noise = image_analysis.calculate_noise(image)
+    # noise = image_analysis.calculate_noise(image)
     # sharpness = cv2.Laplacian(image, cv2.CV_64F).var()
     
     await save_to_db(

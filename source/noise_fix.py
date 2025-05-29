@@ -50,15 +50,15 @@ def evaluate_noise_metrics(image_files):
         mlep_poisson_val = mlep_poisson(original, poisson_noisy)
 
         # Сохранение результатов
-        results[file] = {mse_gauss,psnr_gauss,ssim_gauss,ssim_poisson,mlep_poisson_val}
+        results = [mse_gauss,psnr_gauss,ssim_gauss,ssim_poisson,mlep_poisson_val]
 
-    return results
+    return psnr_gauss
 
 # Список изображений для анализа
-image_files = ['user_photo_{message.from_user.id}.jpg']
+# image_files = ['user_photo_{message.from_user.id}.jpg']
 
 # Выполнение оценки шумности
-results = evaluate_noise_metrics('user_photo_{message.from_user.id}.jpg')
+# results = evaluate_noise_metrics('user_photo_{message.from_user.id}.jpg')
 
 # Сохранение результатов
 #for img, metrics in results.items():
