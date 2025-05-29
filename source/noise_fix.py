@@ -65,12 +65,12 @@ def evaluate_noise_metrics(image_files):
     return results
 
 # Список изображений для анализа
-image_files = ['image.png', 'image2.png', 'image3.png']
+image_files = ['user_photo_{message.from_user.id}.jpg']
 
 # Выполнение оценки шумности
 results = evaluate_noise_metrics(image_files)
 
-# Вывод результатов
+# Сохранение результатов
 for img, metrics in results.items():
     MSE = metrics['Gaussian']['MSE'] # Метод Гаусса
     PSNR = metrics['Gaussian']['PSNR'] # Метод Гаусса db
