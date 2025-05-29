@@ -50,17 +50,7 @@ def evaluate_noise_metrics(image_files):
         mlep_poisson_val = mlep_poisson(original, poisson_noisy)
 
         # Сохранение результатов
-        results[file] = {
-            'Gaussian': {
-                'MSE': mse_gauss,
-                'PSNR': psnr_gauss,
-                'SSIM': ssim_gauss
-            },
-            'Poisson': {
-                'SSIM': ssim_poisson,
-                'MLEP': mlep_poisson_val
-            }
-        }
+        results[file] = {mse_gauss,psnr_gauss,ssim_gauss,ssim_poisson,mlep_poisson_val}
 
     return results
 
@@ -71,9 +61,9 @@ image_files = ['user_photo_{message.from_user.id}.jpg']
 results = evaluate_noise_metrics('user_photo_{message.from_user.id}.jpg')
 
 # Сохранение результатов
-for img, metrics in results.items():
-    MSE = metrics['Gaussian']['MSE'] # Метод Гаусса
-    PSNR = metrics['Gaussian']['PSNR'] # Метод Гаусса db
-    SSIM = metrics['Gaussian']['SSIM'] # Метод Гаусса
-    SSIM = metrics['Poisson']['SSIM'] # Метод Пуассона
-    MLEP = metrics['Poisson']['MLEP'] # Метод Пуассона
+#for img, metrics in results.items():
+    #MSE = metrics['Gaussian']['MSE'] # Метод Гаусса
+    #PSNR = metrics['Gaussian']['PSNR'] # Метод Гаусса db
+    #SSIM = metrics['Gaussian']['SSIM'] # Метод Гаусса
+    #SSIM = metrics['Poisson']['SSIM'] # Метод Пуассона
+    #MLEP = metrics['Poisson']['MLEP'] # Метод Пуассона
