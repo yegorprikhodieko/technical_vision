@@ -21,10 +21,10 @@ def get_brightness_contrast(img,image_path=0):
     except FileNotFoundError:
         return None, None
 
-def calculate_noise(image_path):
+def calculate_noise(img):
     # Рассчитывает шум (стандартное отклонение).
     try:
-        img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+        # img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
         noise = np.std(img)
         return noise
     except FileNotFoundError:
